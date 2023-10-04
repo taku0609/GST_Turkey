@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GST UK</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="fabicon/G.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="fabicon/G.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="fabicon/G.png">
+  <!-- <link rel="manifest" href="fabicon/site.webmanifest"> -->
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <!-- component -->
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body class="bg-white animate-fade-in-down">
+  <header>
+    <div class="w-full h-24 py-4 text-black bg-gray-200 dark-mode:text-gray-200 dark-mode:bg-gray-800 z-40">
+      <div x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 bg-gray-200">
+        <div class="p-4 flex flex-row items-center justify-between">
+          <a href="navbar.html"
+            class="text-2xl font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">
+            GST UK</a>
+
+          <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+          <a class="px-4 py-2 mt-2 text-xl font-semibold bg-transparent rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-blue-600 focus:text-gray-900 focus:bg-white focus:outline-none focus:shadow-outline"
+            href="index.html">Home</a>
+          <a class="px-4 py-2 mt-2 text-xl font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="company_details.html">Company Details</a>
+          <a class="px-4 py-2 mt-2 text-xl font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="services.html">Services</a>
+          <a class="px-4 py-2 mt-2 text-xl font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="clients.html">Clients</a>
+          <a class="px-4 py-2 mt-2 text-xl font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-blue-600 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="contact_us.html">Contact Us</a>
+
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="relative">
+      <img src="chart1.jpg" alt="chart" class="md:flex z-0" />
+    </div>
+    <div class="mt-6 ml-2">
+      <h2 class="text-4xl font-extrabold">'Gold' has been regarded as special since ancient times.</h2>
+      <p class="mt-4 text-xl text-justify font-normal w-3/4">
+        Gold, with its stable properties and long-lasting brilliance, has been regarded as a 'special metal'
+        since
+        ancient times.
+
+        For example, it was already used as an 'ornament' around 6000-5000 BC. Glittering jewellery must have
+        been a
+        special item, worn only by people of high status.
+
+        We also know that gold coins were used in many parts of the world from around 700-600 BC. Gold was also
+        used as
+        currency.
+
+        Now and in the past, gold was treated as 'highly valuable' because it was not easy to obtain and because
+        of its
+        beautiful, ever-luminous properties.
+
+        Even today, 'gold' is treated as a special metal. Many people hold it as a "safe asset", as an
+        investment object
+        that also has value on its own.
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>
